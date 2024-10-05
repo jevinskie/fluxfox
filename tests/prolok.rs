@@ -1,9 +1,8 @@
 mod common;
 
 use fluxfox::bitstream::mfm;
-use fluxfox::bitstream::mfm::encode_mfm;
 use fluxfox::diskimage::RwSectorScope;
-use fluxfox::{DiskChs, DiskImage, DiskImageError, DiskImageFormat, ImageParser};
+use fluxfox::{DiskChs, DiskImage, DiskImageError};
 
 #[test]
 fn test_prolok() {
@@ -40,7 +39,7 @@ fn test_prolok() {
 
     let original_data = sector_data.clone();
 
-    let encoded_bits = encode_mfm(&sector_data, false, mfm::MfmEncodingType::Data);
+    let encoded_bits = mfm::MfmCodec::encode_mfm(&sector_data, false, mfm::MfmEncodingType::Data);
 
     let encoded_bytes = encoded_bits.to_bytes();
 
@@ -57,6 +56,7 @@ fn test_prolok() {
         None,
         &sector_data,
         RwSectorScope::DataOnly,
+        false,
         false,
     ) {
         Ok(result) => result,

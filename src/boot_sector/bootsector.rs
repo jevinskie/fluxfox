@@ -31,7 +31,7 @@
 */
 
 use crate::boot_sector::bpb::{BiosParameterBlock2, BiosParameterBlock3, BPB_OFFSET};
-use crate::io::{Cursor, Read, ReadSeek, ReadWriteSeek, Seek, SeekFrom, Write};
+use crate::io::{Cursor, ReadSeek, ReadWriteSeek, Seek, SeekFrom, Write};
 use crate::{DiskImageError, StandardFormat};
 use binrw::{binrw, BinRead, BinWrite};
 

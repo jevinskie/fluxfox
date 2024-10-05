@@ -1,9 +1,7 @@
 mod common;
 
-use fluxfox::bitstream::mfm;
-use fluxfox::bitstream::mfm::encode_mfm;
 use fluxfox::diskimage::RwSectorScope;
-use fluxfox::{DiskChs, DiskImage, DiskImageError, DiskImageFormat, ImageParser};
+use fluxfox::{DiskChs, DiskImage, DiskImageError};
 
 #[test]
 fn test_bitstream_write() {
@@ -54,6 +52,7 @@ fn test_bitstream_write() {
         None,
         &sector_data,
         RwSectorScope::DataOnly,
+        false,
         false,
     ) {
         Ok(result) => result,

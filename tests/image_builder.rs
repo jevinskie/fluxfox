@@ -12,7 +12,7 @@ fn init() {
 fn test_image_builder() {
     init();
 
-    let mut image = match ImageBuilder::new()
+    let image = match ImageBuilder::new()
         .with_resolution(DiskDataResolution::BitStream)
         .with_standard_format(StandardFormat::PcFloppy360)
         .with_creator_tag("MartyPC ".as_bytes())

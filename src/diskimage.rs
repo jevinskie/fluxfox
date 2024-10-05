@@ -24,7 +24,6 @@
 
     --------------------------------------------------------------------------
 */
-use std::borrow::BorrowMut;
 use std::fmt::Display;
 use std::io::Cursor;
 
@@ -43,7 +42,7 @@ use crate::structure_parsers::system34::{System34Element, System34Parser, System
 use crate::structure_parsers::{DiskStructureElement, DiskStructureMetadata, DiskStructureParser};
 use crate::trackdata::TrackData;
 use crate::{
-    util, DiskDataEncoding, DiskDataRate, DiskDataResolution, DiskDensity, DiskImageError, DiskRpm, EncodingPhase,
+    util, DiskDataEncoding, DiskDataRate, DiskDataResolution, DiskDensity, DiskImageError, DiskRpm,
     FoxHashMap, DEFAULT_SECTOR_SIZE,
 };
 use bit_vec::BitVec;

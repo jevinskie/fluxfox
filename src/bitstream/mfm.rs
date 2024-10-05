@@ -31,7 +31,6 @@
 */
 use crate::diskimage::TrackRegion;
 use crate::io::{Error, ErrorKind, Read, Result, Seek, SeekFrom};
-use crate::random::random_bit;
 use crate::EncodingPhase;
 use bit_vec::BitVec;
 use std::ops::Index;

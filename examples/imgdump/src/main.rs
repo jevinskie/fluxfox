@@ -168,7 +168,7 @@ fn main() {
 
         // If we requested DataBlock scope, we can independently calculate the CRC, so do that now.
         if calc_crc {
-            let calculated_crc = fluxfox::util::crc_ccitt(&data_slice[0..0x104]);
+            let calculated_crc = fluxfox::util::crc_ccitt(&data_slice[0..0x104], None);
             _ = writeln!(&mut buf, "Calculated CRC: {:04X}", calculated_crc);
         }
     } else {

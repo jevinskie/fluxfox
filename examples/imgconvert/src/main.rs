@@ -40,7 +40,6 @@ use fluxfox::diskimage::DiskImageFlags;
 use fluxfox::{format_from_ext, DiskImage, ImageParser, ParserWriteCompatibility};
 use std::io::Cursor;
 use std::path::PathBuf;
-use std::ptr::read;
 
 pub const WARNING: &str = "WARNING: fluxfox is not primarily intended for the purpose of disk\n\
 image conversion. I am not responsible for any data loss or corruption\n\
